@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.trainsModule.user.dao.UserDao">
+    
+    <select id="queryUser" resultType="User" >
+        SELECT id,`name`,`password` FROM sys_user WHERE id = #{id}
+    </select>
+    
+    <insert id="insertUserCid">
+    	INSERT INTO `oa_user_cid` (
+			`client_id`,
+			`user_id`,
+			`createtime`,
+			`status`
+		) VALUES (
+			'1',
+			'1',
+			'2019-03-29 10:34:09',
+			'0'
+		)
+    </insert>
+</mapper>

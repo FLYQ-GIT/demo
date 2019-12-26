@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--开启驼峰命名规则-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--设置主键自增-->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!-- 打印查询语句 -->
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+    <!-- sql 映射文件中的输入/输出参数设置类型别名 -->
+	<typeAliases>
+        <typeAlias alias="String" type="java.lang.String"/>
+        <package name="com.example.demo"/>
+    </typeAliases>
+</configuration>
